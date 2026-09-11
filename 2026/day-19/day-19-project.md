@@ -130,13 +130,13 @@ echo "Old backups deleted successfully"
 ### Run
 
 ```bash
-./backup.sh /home/ubuntu/Sell_script /home/ubuntu/barkups
+./backup.sh /home/ubuntu/day-19 /home/ubuntu/backups
 ```
 
 ### Verification
 
 ```bash
-ls -lh /home/ubuntu/barkups
+ls -lh /home/ubuntu/backups
 ```
 
 <img width="645" height="110" alt="don-2" src="https://github.com/user-attachments/assets/c8ff212d-d515-40e0-b8c6-639ff96d2d91" />
@@ -197,7 +197,7 @@ Save and exit: `Esc` → `:wq` → `Enter`
 
 **Backup – every Sunday at 3 AM**
 ```cron
-0 3 * * 0 /home/ubuntu/day-19/backup.sh /home/ubuntu/Sell_script /home/ubuntu/barkups
+0 3 * * 0 /home/ubuntu/day-19/backup.sh /home/ubuntu/day-19 /home/ubuntu/backups
 ```
 
 **Health check – every 5 minutes**
