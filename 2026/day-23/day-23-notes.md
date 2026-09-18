@@ -261,3 +261,28 @@ git push origin main
 - Connected the local repo to a new GitHub repo and pushed multiple branches.
 - Practiced fetching and pulling changes made directly on GitHub.
 - Reviewed the difference between clone (origin) and fork (origin + upstream), and how to keep a fork in sync.
+
+| # | Command | Purpose |
+|---|---------|---------|
+| 1 | `git init` | Initialize a new local Git repository |
+| 2 | `git add <file>` | Stage a file for commit |
+| 3 | `git commit -m "message"` | Commit staged changes with a message |
+| 4 | `git log --oneline` | View commit history in short form |
+| 5 | `git log --oneline --decorate -1` | View last commit with branch/HEAD labels |
+| 6 | `git branch` | List all local branches |
+| 7 | `git branch <name>` | Create a new branch (without switching to it) |
+| 8 | `git branch -d <name>` | Delete a local branch |
+| 9 | `git switch <branch>` | Switch to an existing branch |
+| 10 | `git switch -c <branch>` | Create a new branch and switch to it in one step |
+| 11 | `git remote add origin <url>` | Link local repo to a GitHub repo as `origin` |
+| 12 | `git remote -v` | List configured remotes and their URLs |
+| 13 | `git push -u origin <branch>` | Push a branch to GitHub and set upstream tracking |
+| 14 | `git branch -r` | List remote-tracking branches |
+| 15 | `git fetch origin` | Download changes from GitHub without merging them |
+| 16 | `git diff <branch1> <branch2>` | Compare differences between two branches |
+| 17 | `git pull` | Fetch + merge changes from the remote into current branch |
+| 18 | `git status` | Show current branch state and pending changes |
+| 19 | `git remote add upstream <url>` | Add a second remote pointing to the original (forked-from) repo |
+| 20 | `git fetch upstream` | Download changes from the original repo (not your fork) |
+| 21 | `git merge upstream/main` | Merge upstream's changes into your local branch |
+| 22 | `ls` | List files in the current directory |
