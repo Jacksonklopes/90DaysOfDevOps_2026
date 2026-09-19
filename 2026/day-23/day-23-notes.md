@@ -253,6 +253,36 @@ git push origin main
 
 ---
 
+## .gitignore vs git rm --cached — who works on what
+
+### .gitignore → works on UNTRACKED files only
+A file has to be BRAND NEW (never added, never committed) for `.gitignore` to hide it.
+
+```bash
+vim .gitignore
+```
+```text
+secrets.txt
+*.log
+logs/
+```
+
+If the file is untracked and matches a pattern in `.gitignore` → it's hidden from `git status`, and `git add .` will skip it automatically.
+
+---
+
+### git rm --cached → works on TRACKED files (staged OR already committed)
+If a file is already staged (after `git add`) or already committed, `.gitignore` alone does nothing — the file is already inside Git's tracking system.
+
+```bash
+git rm --cached <file>
+git commit -m "Stop tracking <file>"
+```
+
+This removes the file from Git's tracking (whether it was staged or fully committed), and moves it back to being an "untracked" file — at which point `.gitignore` can finally take over and hide it for good.
+
+---
+
 ## Summary — Day 23
 
 - Created a new local Git repo and made an initial commit.
