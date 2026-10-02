@@ -40,7 +40,7 @@ A basic Linux command reference for my DevOps learning journey.
 | `ps`      | Shows running processes for the current shell      |
 | `ps aux`  | Shows detailed information about running processes |
 | `top`     | Monitors running processes and resource usage      |
-| `kill`    | Sends a signal to a process                        |
+| `Kill -9 <pid>`    | kill -9 <PID>    # Forcefully terminate the process using SIGKILL (signal 9)                        |
 | `free -h` | Shows RAM/memory usage in a human-readable format  |
 
 ## 4. Networking & Troubleshooting
