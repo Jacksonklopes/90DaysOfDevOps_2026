@@ -65,15 +65,6 @@ When you start a program, Linux creates a process and assigns it a unique PID (P
 | **D** | **Uninterruptible Sleep** — waiting for **kernel I/O** such as reading/writing disk or network data | ❌ Normally no  | `cat file.txt` → **reads data** / `echo "Hello" >> file.txt` → **writes data** *(usually too fast to see D)* | `ps -eo pid,stat,comm`                                   |
 | **T** | Stopped / Paused                                                                                    | —              | **Terminal 1:** `sleep 300` → press `Ctrl+Z`                                                                 | **Terminal 2:** `ps -eo pid,stat,comm \| grep '[s]leep'` |
 | **Z** | Zombie — process has finished, parent hasn't collected it                                           | —              | **Terminal 1:** child process exits, parent stays alive                                                      | **Terminal 2:** `ps -eo pid,ppid,stat,comm`              |
-
-**Process states**
-
-  Running	- Process is running/ready to run
-  Sleeping	- Process is waiting
-  Stopped	- Process is paused
-  Zombie	- Process finished
-  Example:
-  python app.py
   
   **How it manages**
   Program
