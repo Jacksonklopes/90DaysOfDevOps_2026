@@ -58,6 +58,14 @@ Linux is an open-source operating system that manages computer hardware and soft
 
 When you start a program, Linux creates a process and assigns it a unique PID (Process ID).
 
+| State | Meaning                                                                                             | Interruptible? | Practice Example                                                                                             | How to See                                               |
+| ----- | --------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- |
+| **R** | Running / Ready                                                                                     | —              | **Terminal 1:** `yes > /dev/null` → continuously runs                                                        | **Terminal 2:** `ps -eo pid,stat,comm \| grep '[y]es'`   |
+| **S** | **Interruptible Sleep** — waiting for input or another event                                        | ✅ Yes          | **Terminal 1:** `cat` → waits for input                                                                      | **Terminal 2:** `ps -eo pid,stat,comm \| grep '[c]at'`   |
+| **D** | **Uninterruptible Sleep** — waiting for **kernel I/O** such as reading/writing disk or network data | ❌ Normally no  | `cat file.txt` → **reads data** / `echo "Hello" >> file.txt` → **writes data** *(usually too fast to see D)* | `ps -eo pid,stat,comm`                                   |
+| **T** | Stopped / Paused                                                                                    | —              | **Terminal 1:** `sleep 300` → press `Ctrl+Z`                                                                 | **Terminal 2:** `ps -eo pid,stat,comm \| grep '[s]leep'` |
+| **Z** | Zombie — process has finished, parent hasn't collected it                                           | —              | **Terminal 1:** child process exits, parent stays alive                                                      | **Terminal 2:** `ps -eo pid,ppid,stat,comm`              |
+
 **Process states**
 
   Running	- Process is running/ready to run
