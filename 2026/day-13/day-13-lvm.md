@@ -168,3 +168,24 @@ df -h /mnt/app-data
 | `pvremove /dev/nvme1n1` | Remove the Physical Volume |
 | `pvremove /dev/nvme2n1` | Remove the Physical Volume |
 | `pvs` / `vgs` / `lvs` | Verify LVM removal |
+
+
+## LVM — Why Each Step Is Needed
+
+**Why `lsblk`?**
+To see available disks and their sizes.
+
+**Why create a Physical Volume (PV)?**
+To prepare a disk for use by LVM.
+
+**Why create a Volume Group (VG)?**
+To combine multiple Physical Volumes into one storage pool, used to create Logical Volumes.
+
+**Why LVM?**
+To manage and resize storage flexibly.
+
+**Why format with ext4?**
+A freshly created Logical Volume is just raw, unformatted disk space — formatting with ext4 makes it usable for actually storing files.
+
+**Why resize the filesystem after extending the LVM?**
+Extending the Logical Volume only adds raw space — the filesystem itself still needs to be resized separately so it can actually use the newly added space.
