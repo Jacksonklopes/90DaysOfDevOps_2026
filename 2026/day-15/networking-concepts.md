@@ -91,13 +91,14 @@ YOUR-PRIVATE-IP
 **CIDR** stands for **Classless Inter-Domain Routing** — a way to write an IP network using `/number` notation.
 
 ```text
-192.168.1.0/24
+192.168.1.0/24 (192.168.1.0 - 32 bits)
 ```
 
 ### 2. What does `/24` mean?
 
 - **24 bits** → Network
 - **8 bits** → Hosts
+- so ip adress has total of 32 bits)
 
 Subnet mask:
 ```text
@@ -107,7 +108,7 @@ Subnet mask:
 ### 3. Usable Hosts
 
 ```text
-Total IPs = 2^(32 - CIDR)
+Total IPs = 2^(32 - CIDR(24 or 16))
 Usable Hosts = Total IPs - 2
 ```
 
