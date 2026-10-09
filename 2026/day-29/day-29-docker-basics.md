@@ -74,8 +74,6 @@ The `hello-world` output explains what happened:
 3. The daemon created a container from that image.
 4. The container printed the message, and the daemon sent it to my terminal.
 
-<img src="images/day29-hello-world.png" width="700" alt="hello-world output">
-
 ---
 
 ## Task 3: Run Real Containers
@@ -93,8 +91,6 @@ sudo docker run -d -p 80:80 nginx
 | `nginx` | The image |
 
 I opened the EC2 public IP in my browser and saw the default Nginx welcome page.
-
-<img src="images/day29-nginx-welcome.png" width="700" alt="Nginx welcome page">
 
 ### 2. Ubuntu container (interactive mode)
 
@@ -119,8 +115,6 @@ ls
 ```
 
 When I typed `exit`, the container stopped. A container only runs as long as its main process, and here that was `bash`.
-
-<img src="images/day29-ubuntu-container.png" width="700" alt="Ubuntu container">
 
 ### 3. List running containers
 
@@ -187,8 +181,6 @@ The logs showed Nginx starting and handling requests:
 - `200` means the request succeeded
 - `404` means the resource wasn't found (I saw it for `/favicon.ico`, which browsers request automatically)
 
-<img src="images/day29-docker-logs.png" width="700" alt="docker logs output">
-
 ### 5. Run a command inside a running container
 
 ```bash
@@ -209,8 +201,6 @@ sudo docker top agitated_austin
 
 - `nginx: master process` manages the workers
 - `nginx: worker process` handles requests
-
-<img src="images/day29-docker-top.png" width="700" alt="docker top output">
 
 ---
 
