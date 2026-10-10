@@ -47,6 +47,8 @@ Linux is an open-source operating system that manages computer hardware and soft
 User space is the part of the operating system where normal applications run, like bash, nginx, and the commands you type. It has its own filesystem, libraries, and tools, but it can’t access hardware directly. When a program needs the disk, network, or memory, it asks the kernel through system calls.  Examples:
   Bash
   Python
+
+**  A system call** is how a user-space program asks the kernel to do something it isn’t allowed to do directly, like reading a file or using the network. For example, when I run cat file.txt, cat can’t touch the disk itself, so it makes open and read system calls, and the kernel does the actual work and returns the data.
   
   4. **Init / systemd**
   systemd is usually the first process (PID 1) started by the kernel.
