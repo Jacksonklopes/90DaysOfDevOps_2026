@@ -33,7 +33,7 @@ Without containers, an app can work on one machine and fail on another because o
 | **Client** | The tool I type commands into (`docker run`, `docker ps`). Sends requests to the daemon. |
 | **Daemon** | Background service that manages images, containers, networks, and volumes. |
 | **Image** | Read-only template used to create containers. |
-| **Container** | A running instance created from an image. |
+| **Container** | A running instance created from an image. An instance of an image is a container created from that image. The image holds the application and all the dependencies it needs, and the container is the running copy that actually executes the application. |
 | **Registry** | Stores images. Docker Hub is the default one. |
 
 ```text
