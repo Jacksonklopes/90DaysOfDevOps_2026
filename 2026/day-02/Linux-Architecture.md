@@ -44,8 +44,7 @@ Linux is an open-source operating system that manages computer hardware and soft
   Kernel = Communicates between software and hardware.
   
   3. **User Space**
-  User space is where applications and commands run.
-  Examples:
+User space is the part of the operating system where normal applications run, like bash, nginx, and the commands you type. It has its own filesystem, libraries, and tools, but it can’t access hardware directly. When a program needs the disk, network, or memory, it asks the kernel through system calls.  Examples:
   Bash
   Python
   
