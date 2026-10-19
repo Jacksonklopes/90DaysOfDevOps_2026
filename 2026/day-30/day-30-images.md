@@ -263,6 +263,11 @@ This command helps identify how much disk space Docker is using.
 
 ---
 
+docker run -itd ubuntu bash   → creates a new container and runs it in the background
+docker run -it ubuntu bash    → creates a new container and opens a shell inside it
+docker exec -it <name> bash   → opens a shell inside an already running container
+
+
 ## Important Commands Revision
 
 | Command | Purpose |
