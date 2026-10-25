@@ -25,8 +25,8 @@ I come from a **non-IT background** and I want to build a career in the IT indus
 ## My Weekly Time Commitment
 
 * **Daily:** 2 hours of focused learning and hands-on practice
-* **Daily revision:** 15 minutes to revise previously learned concepts
-* **Weekends:** 4 hours per day for deeper practice, projects, and revision
+* **Daily revision:** for revise previously learned concepts
+* **Weekends:** 4 hours for deeper practice, projects, and revision
 
 **Daily routine:** Learn → Practice → Revise → Document → Share
 
