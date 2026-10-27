@@ -81,6 +81,11 @@ docker compose -f docker-compose.wordpress.yml up -d
 
 A `.env` file keeps values (like passwords) **out of the YAML**. Compose reads it automatically and fills in `${VARIABLE}`.
 
+- Compose loads the `.env` file **automatically** every time you run a `docker compose` command (`up`, `config`, `ps`, `down`). No extra command or config is needed.
+- The `.env` file must be in the **same folder as the compose file**.
+- It replaces every `${VARIABLE}` in the YAML with the value from `.env`, **before** any container starts.
+- Use `docker compose config` to see the final YAML with all values filled in.
+
 `.env`:
 
 ```dotenv
