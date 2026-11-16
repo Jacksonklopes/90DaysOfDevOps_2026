@@ -1,9 +1,5 @@
 # Docker Revision Notes (Days 29–37)
 
-One place to revise everything I learned about Docker. Written so I can understand it again after 100 days.
-
-**Day 36 project code:** https://github.com/Jacksonklopes/Docker-projects/tree/main/day-36
-
 ---
 
 ## 1. The big picture
